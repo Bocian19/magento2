@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Lukasz_Vehicle::vehicle" title="Vehicle" translate="title" module="Lukasz_Vehicle" sortOrder="20" resource="Lukasz_Vehicle::vehicle"/>
+	<add id="Lukasz_Vehicle::all_vehicles" title="All vehicles" translate="title" module="Lukasz_Vehicle" sortOrder="10" resource="Lukasz_Vehicle::all_vehicles" parent="Lukasz_Vehicle::vehicle" action="lukasz_vehicles/vehicle/index"/>
+    </menu>
+</config>
+

@@ -1,0 +1,11 @@
+{
+    "vehicle": {
+        "column": {
+            "vehicle_id": true,
+            "name": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

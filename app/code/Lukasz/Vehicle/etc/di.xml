@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Magento\Framework\App\Request\CsrfValidator">
+    	<plugin name="csrf_validator_skip" type="Module\Name\Plugin\CsrfValidatorSkip" />
+	</type>   
+ <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="lukasz_vehicle_vehicle_listing_data_source" xsi:type="string">Lukasz\Vehicle\Model\ResourceModel\Vehicle\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Lukasz\Vehicle\Model\ResourceModel\Vehicle\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">vehicle</argument>
+            <argument name="eventPrefix" xsi:type="string">lukasz_vehicle_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">vehicle_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Lukasz\Vehicle\Model\ResourceModel\Vehicle</argument>
+        </arguments>
+    </type>
+</config>
+
